@@ -88,18 +88,20 @@ class Todo extends Component {
                 >
                     #{id} Name: {name}
                 </Text>
-                <Text
-                    style={isComplete ? styles.isUncomplete : styles.isComplete}
-                    onPress={this._handleCompleteClick}
-                >
-                    {isComplete ? "Complete" : "Uncomplete"}
-                </Text>
-                <Text
-                    style={styles.remove}
-                    onPress={this._handleRemoveClick}
-                >
-                    Remove
-                </Text>
+                <View style={styles.actions}>
+                    <Text
+                        style={isComplete ? styles.isUncomplete : styles.isComplete}
+                        onPress={this._handleCompleteClick}
+                    >
+                        {isComplete ? "Complete" : "Uncomplete"}
+                    </Text>
+                    <Text
+                        style={styles.remove}
+                        onPress={this._handleRemoveClick}
+                    >
+                        Remove
+                    </Text>
+                </View>
             </View>;
     }
 }

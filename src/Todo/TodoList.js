@@ -5,7 +5,7 @@ import {
     TextInput
 } from 'react-native';
 import Todo from './components/Todo'
-import styles from './styles/todos';
+import appStyles from './styles/app';
 
 class TodoList extends Component {
     state = {
@@ -91,16 +91,16 @@ class TodoList extends Component {
         const { todos } = this.state;
 
         return (
-            <View style={{ flex: 1, marginTop: 50 }}>
-                <View style={{ flex: 1 }}>
+            <View style={appStyles.container}>
+                <View style={appStyles.inputWrapper}>
                     <TextInput
-                        style={styles.input}
+                        style={appStyles.input}
                         placeholder="Create Todo"
                         onEndEditing={this._handleCreateTodo}
                         onChangeText={this._onChangeNewTodoText}
                     />
                 </View>
-                <View style={{ flex: 9 }}>
+                <View>
                     <FlatList
                         data={todos}
                         keyExtractor={this._keyExtractor}

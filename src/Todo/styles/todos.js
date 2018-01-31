@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import {
-    WHITE,
     IRON,
     GREEN,
     ORANGE,
     RED
 } from './common/colors';
-import { input } from './common/elements';
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "baseline",
-        backgroundColor: WHITE,
-        marginTop: 100
-    },
-    input,
     todo: {
-        flex: 2,
+        flex: 1,
         borderRadius: 4,
         borderWidth: 0.5,
         borderColor: IRON,
         padding: 10,
         margin: 10
+    },
+    actions: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     isComplete: {
         flex: 1,
